@@ -11,15 +11,15 @@ Systimer_control.Add(temp)
 temp = tempTimer(Pkuxkx_slow_time,function() raiseEvent("CMD_clk_event_slow", true) end, true)
 Systimer_control.Add(temp)
 --   监测节拍
-temp = tempTimer(Pkuxkx_slow_time1,function() raiseEvent("CMD_clk_event_slow", true) end, true)
+temp = tempTimer(Pkuxkx_slow_time1,function() raiseEvent("CMD_clk_event_slow1", true) end, true)
 Systimer_control.Add(temp)
 --   监测节拍
-temp = tempTimer(Pkuxkx_slow_time2,function() raiseEvent("CMD_clk_event_slow", true) end, true)
+temp = tempTimer(Pkuxkx_slow_time2,function() raiseEvent("CMD_clk_event_slow2", true) end, true)
 Systimer_control.Add(temp)
 --   监测节拍
-temp = tempTimer(Pkuxkx_slow_time3,function() raiseEvent("CMD_clk_event_slow", true) end, true)
+temp = tempTimer(Pkuxkx_slow_time3,function() raiseEvent("CMD_clk_event_slow3", true) end, true)
 Systimer_control.Add(temp)
 
 
 
-Log.echo("系统时钟加载成功",0)
+Log.echo("系统时钟加载成功",1)
