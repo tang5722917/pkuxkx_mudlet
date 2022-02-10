@@ -1,8 +1,10 @@
 --环境变量设置
 Lua_path = 'D:/Game/PKUXKX/mudlet_-auto-robot/'
 
+dofile(Lua_path.."pkuxkx_load_init.lua")
 
-registerAnonymousEventHandler("sysLoadEvent", "LoadEvent")
-function LoadEvent(event, is_load)
+registerAnonymousEventHandler("ReLoadEvent", "ReLoadEvent")
+function ReLoadEvent(event)
+  SysReset()
   dofile(Lua_path.."pkuxkx_load_init.lua")
 end
