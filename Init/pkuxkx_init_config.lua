@@ -6,7 +6,7 @@
 --Debug 功能
 Pkuxkx_Debug_enable = 1
 Pkuxkx_Debug_log_folder = ""
-Pkuxkx_Debug_log_rank = 0
+Pkuxkx_Debug_log_rank = 5
 
 -- 系统时钟设置
 Pkuxkx_fast_time = 0.1      --0.1s  系统处理节拍
