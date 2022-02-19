@@ -1,1 +1,1 @@
-Pku_Trigger.T("Test",function() echo("Hellow World") end,0)
+Pku_Trigger.T("Test",function() echo("Hellow World") end,1)

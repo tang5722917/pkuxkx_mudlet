@@ -16,4 +16,4 @@ if (Pkuxkx_Debug_enable == 1) then
     dofile(Lua_path.."Debug/pkuxkx_Debuginit.lua")
 end
 
-Log.echo("脚本重新加载成功\n",0)
+Log.echo("脚本重新加载成功\n",1)
