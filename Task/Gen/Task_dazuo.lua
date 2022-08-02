@@ -14,17 +14,17 @@ function Task_dazuo.stop()
   end
   
   function Task_dazuo_StopEvent(event)
-    if times == 0 then
+    if Task_dazuo.times <= 0 then
       Task_dazuo.stop()
       Log.echo("Task_dazuo task times expire ", 2)
     end
-    times = times -1
+    Task_dazuo.times = Task_dazuo.times - 1
   end
   
   function Task_dazuo_StartEvent(event, times)
     pkuxkx_cmd.add_string_normal("dz")
     Task_dazuo.start()
-    Task_dazuo.times = 1
+    Task_dazuo.times = times
     Log.echo("Task_dazuo task times set "..times, 2)
   end
 
