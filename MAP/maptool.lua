@@ -1,5 +1,7 @@
+pkuxkx_maptool = pkuxkx_maptool or {}
 
-function pkuxkx_maptool.reverse( walk_table )
+-- 输出一个方向序列的逆序列
+function pkuxkx_maptool.reverse( walk_table )       
     local return_table={}
     local return_table_r={}
     local temp

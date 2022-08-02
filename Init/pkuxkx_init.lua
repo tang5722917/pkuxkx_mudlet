@@ -3,12 +3,14 @@
 --
 --SysTrigger
 --初始化系统配置文件
-dofile(Lua_path.."init/pkuxkx_init_config.lua")
+dofile(Lua_path.."Init/pkuxkx_init_config.lua")
 --加载日志功能
 dofile(Lua_path.."Sys/pkuxkx_SysLog.lua")
 --加载核心功能
 dofile(Lua_path.."Sys/pkuxkx_Sysinit.lua")
 --加载系统快捷键
+--加载地图系统
+dofile(Lua_path.."MAP/pkuxkx_map_init.lua")
 --加载UI
 --加载数据库
 
