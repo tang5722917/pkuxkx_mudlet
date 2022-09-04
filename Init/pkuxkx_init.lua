@@ -1,3 +1,12 @@
+--[[
+Author: Donald Duck tang5722917@163.com
+Date: 2022-08-25 20:21:21
+LastEditors: Donald Duck tang5722917@163.com
+LastEditTime: 2022-09-05 02:29:33
+FilePath: /mudlet_-auto-robot/Init/pkuxkx_init.lua
+Description:
+Copyright (c) 2022 by Donald Duck email: tang5722917@163.com, All Rights Reserved.
+--]]
 --
 --功能：脚本初始
 --
