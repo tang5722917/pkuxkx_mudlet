@@ -1,4 +1,2 @@
-1.新建一个脚本文件，如"Init_Mudlet".
-(Init.JPG 图中所示)
+1.在mudlet中新建一个脚本文件，如"Init_Mudlet". (Init.JPG 图中所示)
 2.复制Mudlet_config.txt中的文本到<Init_Mudlet>中
-3.按照<Reload.JPG>所示设置快捷键
