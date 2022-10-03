@@ -1,10 +1,10 @@
 --[[
 Author: Donald Duck tang5722917@163.com
-Date: 2022-08-25 20:21:21
+Date: 2022-09-06 09:07:15
 LastEditors: Donald Duck tang5722917@163.com
-LastEditTime: 2022-09-05 02:29:33
+LastEditTime: 2022-10-04 02:44:10
 FilePath: /mudlet_-auto-robot/Init/pkuxkx_init.lua
-Description:
+Description: Import all function module
 Copyright (c) 2022 by Donald Duck email: tang5722917@163.com, All Rights Reserved.
 --]]
 --
@@ -21,6 +21,7 @@ dofile(Lua_path.."Sys/pkuxkx_Sysinit.lua")
 --加载地图系统
 dofile(Lua_path.."MAP/pkuxkx_map_init.lua")
 --加载UI
+dofile(Lua_path.."UI/pkuxkx_UI_init.lua")
 --加载数据库
 
 if (Pkuxkx_Debug_enable == 1) then
