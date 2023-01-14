@@ -1,7 +1,7 @@
 pkuxkx_map_data = pkuxkx_map_data or {}
 
 --导入具体地图文件
-
+dofile(Lua_path .. "MAP/Map_DATA/Map_Data_Wudang.lua")
 
 -- 世界地图
 pkuxkx_map_data.date = {}

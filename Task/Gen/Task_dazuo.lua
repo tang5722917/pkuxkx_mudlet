@@ -24,7 +24,7 @@ function Task_dazuo.stop()
   end
 
   function Task_dazuo_StopEvent(event)
-    if Task_dazuo.times <= 0 then
+    if (Task_dazuo.times <= 0) then
       Task_dazuo.stop()
       Log.echo("Task_dazuo task times expire ", 2)
     end

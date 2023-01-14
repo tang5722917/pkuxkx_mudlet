@@ -158,42 +158,61 @@ GUI.Footer = Geyser.HBox:new({
     margin: 5px;
   ]])
 
-  GUI.Health = Geyser.Gauge:new({
-    name = "GUI.Health",
+  GUI.Jingshen = Geyser.Gauge:new({
+    name = "GUI.Jingshen",
   },GUI.LeftColumn)
-  GUI.Health.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
+  GUI.Jingshen.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
   GUI.GaugeFrontCSS:set("background-color","red")
-  GUI.Health.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
-  GUI.Health:setValue(math.random(100),100)
-  GUI.Health.front:echo("GUI.Health")
+  GUI.Jingshen.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
+  GUI.Jingshen:setValue(100,100)
+  GUI.Jingshen.front:echo("精神")
 
-  GUI.Mana = Geyser.Gauge:new({
-    name = "GUI.Mana",
+  GUI.Xueqi = Geyser.Gauge:new({
+    name = "Xueqi",
   },GUI.LeftColumn)
-  GUI.Mana.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
-  GUI.GaugeFrontCSS:set("background-color","blue")
-  GUI.Mana.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
-  GUI.Mana:setValue(math.random(100),100)
-  GUI.Mana.front:echo("GUI.Mana")
+  GUI.Xueqi.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
+  GUI.GaugeFrontCSS:set("background-color","red")
+  GUI.Xueqi.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
+  GUI.Xueqi:setValue(50,100)
+  GUI.Xueqi.front:echo("血气")
 
-  GUI.Endurance = Geyser.Gauge:new({
-    name = "GUI.Endurance",
+  GUI.Jingli = Geyser.Gauge:new({
+    name = "GUI.Jingli",
   },GUI.RightColumn)
-  GUI.Endurance.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
-  GUI.GaugeFrontCSS:set("background-color","yellow")
-  GUI.Endurance.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
-  GUI.Endurance:setValue(math.random(100),100)
-  --GUI.Endurance.front:echo("GUI.Endurance")
-  GUI.Endurance.front:echo([[<span style = "color: black">GUI.Endurance</span>]])
+  GUI.Jingli.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
+  GUI.GaugeFrontCSS:set("background-color","orange")
+  GUI.Jingli.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
+  GUI.Jingli:setValue(80,100)
+  GUI.Jingli.front:echo("精力")
+  --GUI.Jingli.front:echo([[<span style = "color: black">GUI.Endurance</span>]])
 
-  GUI.Willpower = Geyser.Gauge:new({
-    name = "GUI.Willpower",
+  GUI.Neili = Geyser.Gauge:new({
+    name = "GUI.Neili",
   },GUI.RightColumn)
-  GUI.Willpower.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
-  GUI.GaugeFrontCSS:set("background-color","purple")
-  GUI.Willpower.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
-  GUI.Willpower:setValue(math.random(100),100)
-GUI.Willpower.front:echo("GUI.Willpower")
+  GUI.Neili.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
+  GUI.GaugeFrontCSS:set("background-color","orange")
+  GUI.Neili.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
+  GUI.Neili:setValue(70,100)
+GUI.Neili.front:echo("内力")
+
+GUI.Shiwu = Geyser.Gauge:new({
+  name = "GUI.Shiwu",
+},GUI.LeftColumn)
+GUI.Shiwu.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
+GUI.GaugeFrontCSS:set("background-color","blue")
+GUI.Shiwu.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
+GUI.Shiwu:setValue(50,100)
+GUI.Shiwu.front:echo("食物")
+
+GUI.Yinshui = Geyser.Gauge:new({
+  name = "GUI.Yinshui",
+},GUI.RightColumn)
+GUI.Yinshui.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
+GUI.GaugeFrontCSS:set("background-color","blue")
+GUI.Yinshui.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
+GUI.Yinshui:setValue(80,100)
+GUI.Yinshui.front:echo("饮水")
+--GUI.Yinshui.front:echo([[<span style = "color: black">饮水]])
 
 GUI.BoxCSS = CSSMan.new([[
   background-color: rgba(0,0,0,100);
