@@ -1,3 +1,6 @@
+
+
+
 -- 元类
 
 Trigger = {tri_list = {},tri_num = 0, tri_name = nil}
@@ -8,8 +11,7 @@ function Trigger:new (o, name)
     o = o or {}
     setmetatable(o,self)
     self.__index = self
-    name = name or "default_trigger_name"
-    self.tri_name = name
+    self.tri_name = name or "default_trigger_name"
     self.tri_list = {}
     self.tri_num = 0
     return o
@@ -46,5 +48,3 @@ function Trigger:killTrigger()
         killTrigger(v)
     end
 end
-
-

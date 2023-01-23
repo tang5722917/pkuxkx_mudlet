@@ -18,6 +18,9 @@ dofile(Lua_path.."Sys/pkuxkx_SysLog.lua")
 --加载核心功能
 dofile(Lua_path.."Sys/pkuxkx_Sysinit.lua")
 --加载系统快捷键
+
+--加载任务系统
+dofile(Lua_path.."Task/pkuxkx_Task_init.lua")
 --加载地图系统
 dofile(Lua_path.."MAP/pkuxkx_map_init.lua")
 --加载UI

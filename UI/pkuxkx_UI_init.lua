@@ -9,6 +9,6 @@ Copyright (c) 2022 by Donald Duck email: tang5722917@163.com, All Rights Reserve
 --]]
 
 dofile(Lua_path .. "UI/pkuxkx_UI_base.lua")
-
+dofile(Lua_path .. "UI/UI_logic/UI_logic_init.lua")
 
 Log.echo("UI module 加载成功",1)
