@@ -39,9 +39,9 @@ function Trigger:tempTrigger(substring,code,expireAfter)
     self.tri_num = self.tri_num + 1
     table.insert(self.tri_list,tRt)
 end
-function Trigger:tempComplexRegexTrigger(name, regex, code, multiline,fg_color, bg_color, filter, match_all, highlight_fg_color, highlight_bg_color, play_sound_file, fire_length, line_delta, expireAfter)
+function Trigger:tempMultiRegexTrigger(name, regex, code, multiline,expireAfter)
     expireAfter = expireAfter or 1
-    local tRt = tempComplexRegexTrigger(name, regex, code, multiline,fg_color, bg_color, filter, match_all, highlight_fg_color, highlight_bg_color, play_sound_file, fire_length, line_delta, expireAfter)
+    local tRt = tempComplexRegexTrigger(name, regex, code, multiline,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, expireAfter)
     self.tri_num = self.tri_num + 1
     table.insert(self.tri_list,tRt)
 end

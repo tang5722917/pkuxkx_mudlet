@@ -83,11 +83,11 @@ end
 function Task:stop()
     self:disable_tri_obj()
     self:disable_timer_obj()
-    Log.echo("Gen Task ".. self.task_name .." trigger/timer stop \n", 5)
+    Log.echo("Task ".. self.task_name .." trigger/timer stop \n", 5)
 end
 
 function Task:kill()
     self:kill_tri_obj()
     self:kill_timer_obj()
-    Log.echo("Gen Task ".. self.task_name .." trigger/timer kill \n", 5)
+    Log.echo("Task ".. self.task_name .." trigger/timer kill \n", 5)
 end
