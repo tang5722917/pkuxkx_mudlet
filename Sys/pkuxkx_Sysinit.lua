@@ -9,7 +9,12 @@ Copyright (c) 2022 by Donald Duck email: tang5722917@163.com, All Rights Reserve
 --]]
 --System 初始化导入
 dofile(Lua_path.."Sys/SysFun/pkuxkx_SysFun_table.lua")
-dofile(Lua_path.."Sys/SysFun/pkuxkx_Trigger_Base.lua")
+dofile(Lua_path .. "Sys/SysFun/pkuxkx_Trigger_Base.lua")
+dofile(Lua_path .. "Sys/SysFun/pkuxkx_Timer_Base.lua")
+dofile(Lua_path .. "Sys/SysFun/pkuxkx_Task_Base.lua")
+dofile(Lua_path .. "Sys/SysFun/pkuxkx_Task_Control.lua")
+dofile(Lua_path .. "Sys/SysFun/pkuxkx_Sys_status.lua")
+
 
 dofile(Lua_path.."Sys/pkuxkx_SysTrigger_Timer_Control.lua")
 dofile(Lua_path.."Sys/pkuxkx_SysCLKInit.lua")

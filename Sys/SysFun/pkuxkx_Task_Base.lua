@@ -32,6 +32,11 @@ function Task:add_tri_obj(tri_obj)
     table.insert(self.tri_obj_list,tri_obj)
 end
 
+function Task:add_timer_obj(tri_obj)
+    self.timer_obj_num = self.timer_obj_num + 1
+    table.insert(self.timer_obj_list,tri_obj)
+end
+
 function Task:enable_tri_obj()
     for i, v in pairs(self.tri_obj_list) do
         v:enableTrigger()
@@ -46,21 +51,43 @@ end
 
 function Task:kill_tri_obj()
     for i, v in pairs(self.tri_obj_list) do
-        v:killTrigger(v)
+        v:killTrigger()
     end
 end
 
+function Task:enable_timer_obj()
+    for i, v in pairs(self.timer_obj_list) do
+        v:enableTimer()
+    end
+end
+
+function Task:disable_timer_obj()
+    for i, v in pairs(self.timer_obj_list) do
+        v:disableTimer()
+    end
+end
+
+function Task:kill_timer_obj()
+    for i, v in pairs(self.timer_obj_list) do
+        v:killTimer()
+    end
+end
+
+
 function Task:start()
     self:enable_tri_obj()
+    self:enable_timer_obj()
     Log.echo("Gen Task ".. self.task_name .." trigger/timer start \n", 5)
 end
 
 function Task:stop()
     self:disable_tri_obj()
+    self:disable_timer_obj()
     Log.echo("Gen Task ".. self.task_name .." trigger/timer stop \n", 5)
 end
 
 function Task:kill()
     self:kill_tri_obj()
+    self:kill_timer_obj()
     Log.echo("Gen Task ".. self.task_name .." trigger/timer kill \n", 5)
 end

@@ -1,3 +1,12 @@
+--[[
+Author: Tangzp tang5722917@163.com
+Date: 2023-01-24 04:42:47
+LastEditors: Tangzp tang5722917@163.com
+LastEditTime: 2023-01-24 22:56:31
+FilePath: \mudlet_-auto-robot\Sys\SysFun\pkuxkx_Trigger_Base.lua
+Description:
+Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
+--]]
 
 
 
@@ -30,6 +39,13 @@ function Trigger:tempTrigger(substring,code,expireAfter)
     self.tri_num = self.tri_num + 1
     table.insert(self.tri_list,tRt)
 end
+function Trigger:tempComplexRegexTrigger(name, regex, code, multiline,fg_color, bg_color, filter, match_all, highlight_fg_color, highlight_bg_color, play_sound_file, fire_length, line_delta, expireAfter)
+    expireAfter = expireAfter or 1
+    local tRt = tempComplexRegexTrigger(name, regex, code, multiline,fg_color, bg_color, filter, match_all, highlight_fg_color, highlight_bg_color, play_sound_file, fire_length, line_delta, expireAfter)
+    self.tri_num = self.tri_num + 1
+    table.insert(self.tri_list,tRt)
+end
+
 
 function Trigger:enableTrigger()
     for i, v in pairs(self.tri_list) do

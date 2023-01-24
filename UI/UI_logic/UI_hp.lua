@@ -27,3 +27,15 @@ HP_UI.task = Task:new(nil, "HP_UI")
 
 HP_UI.trigger = Trigger:new(nil, "HP_UI")
 HP_UI.timmer = Timer:new(nil, "HP_UI")
+
+--HP_UI.trigger:tempComplexRegexTrigger("HP_capture_tri",,3)
+
+HP_UI.timmer:tempTimer(Pkuxkx_HP_UI_Auto_time,
+function ()  raiseEvent("HP_update")  end
+    , true)
+
+
+HP_UI.task:add_timer_obj(HP_UI.timmer)
+HP_UI.task:start()
+
+UI_task_list:add_task_obj(HP_UI.task)
