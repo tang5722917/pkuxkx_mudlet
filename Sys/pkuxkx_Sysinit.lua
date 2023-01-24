@@ -21,6 +21,6 @@ dofile(Lua_path.."Sys/SysProcess/process_func.lua")
 dofile(Lua_path.."Sys/SysProcess/process_base.lua")
 dofile(Lua_path.."Sys/pkuxkx_SysKey.lua")
 dofile(Lua_path.."Sys/pkuxkx_SysAlias.lua")
-dofile(Lua_path.."Sys/pkuxkx_SysReset.lua")
+
 
 Log.echo("System 加载成功",1)

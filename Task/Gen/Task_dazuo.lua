@@ -1,11 +1,10 @@
-
 --[[
 Author: Tangzp tang5722917@163.com
-Date: 2023-01-18 06:22:56
+Date: 2023-01-24 04:42:47
 LastEditors: Tangzp tang5722917@163.com
-LastEditTime: 2023-01-24 02:13:19
+LastEditTime: 2023-01-24 20:35:59
 FilePath: \mudlet_-auto-robot\Task\Gen\Task_dazuo.lua
-Description: 打坐功能
+Description:打坐功能
 Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
 --]]
 
@@ -13,6 +12,7 @@ Task_dazuo = Task_dazuo or {}
 Task_dazuo.times = 0
 
 Task_dazuo.trigger = Trigger:new(nil, "dazuo")
+
 Task_dazuo.task = Task:new(nil,  "dazuo")
 
 registerAnonymousEventHandler("Task_dazuo_StartEvent", "Task_dazuo_StartEvent")
@@ -51,5 +51,6 @@ registerAnonymousEventHandler("Task_dazuo_StopEvent", "Task_dazuo_StopEvent")
   pkuxkx_cmd.add_string_normal("dz") raiseEvent("Task_dazuo_StopEvent")
   end)
 
-  Task_dazuo.task:add_tri_obj(Task_dazuo.trigger)
-  Task_dazuo.task:stop()
+Task_dazuo.task:add_tri_obj(Task_dazuo.trigger)
+Task_dazuo.task:stop()
+Gen_task_list:add_task_obj(Task_dazuo.task)
