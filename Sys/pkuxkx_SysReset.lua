@@ -12,4 +12,5 @@ function SysReset()
     Systimer_control.KillAll ()
     Systrigger_control.KillAll()
     Task_reset()
+    UI_reset()
 end

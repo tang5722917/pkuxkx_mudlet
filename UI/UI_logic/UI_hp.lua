@@ -7,11 +7,23 @@ FilePath: \mudlet_-auto-robot\UI\UI_logic\UI_hp.lua
 Description:
 Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
 --]]
+HP_UI = HP_UI or {}
 
+registerAnonymousEventHandler("HP_update", "HP_update")
 
-GUI.Jingshen:setValue(100, 100)
-GUI.Xueqi:setValue(100, 100)
-GUI.Jingli:setValue(100, 100)
-GUI.Neili:setValue(100, 100)
-GUI.Shiwu:setValue(100, 100)
-GUI.Yinshui:setValue(100,100)
+function HP_update(event)
+    pkuxkx_cmd.add_string_normal("hpbrief")
+  end
+
+function HP_UI.update()
+    GUI.Jingshen:setValue(100, 100)
+    GUI.Xueqi:setValue(100, 100)
+    GUI.Jingli:setValue(100, 100)
+    GUI.Neili:setValue(100, 100)
+    GUI.Shiwu:setValue(100, 100)
+    GUI.Yinshui:setValue(100,100)
+end
+HP_UI.task = Task:new(nil, "HP_UI")
+
+HP_UI.trigger = Trigger:new(nil, "HP_UI")
+HP_UI.timmer = Timer:new(nil, "HP_UI")

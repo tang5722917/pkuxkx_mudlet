@@ -8,3 +8,4 @@ Description:
 Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
 --]]
 dofile(Lua_path .. "User/pkuxkx_user_Base.lua")
+dofile(Lua_path .. "User/pkuxkx_user_create.lua")
