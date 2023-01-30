@@ -10,45 +10,50 @@ Copyright (c) 2022 by Donald Duck email: tang5722917@163.com, All Rights Reserve
 Task_dazuo = Task_dazuo or {}
 Task_dazuo.times = 0
 
+Task_dazuo.trigger = Trigger:new(nil,"dazuo")
+
+
 registerAnonymousEventHandler("Task_dazuo_StartEvent", "Task_dazuo_StartEvent")
 registerAnonymousEventHandler("Task_dazuo_StopEvent", "Task_dazuo_StopEvent")
 
 function Task_dazuo.stop()
-  disableTrigger(Task_dazuo.tr1) disableTrigger(Task_dazuo.tr2) disableTrigger(Task_dazuo.tr3)
-  Log.echo("Task_dazuo trigger stop ", 3)
+  Task_dazuo.trigger:disableTrigger()
   end
 
   function Task_dazuo.start()
-    enableTrigger(Task_dazuo.tr1) enableTrigger(Task_dazuo.tr2) enableTrigger(Task_dazuo.tr3)
-    Log.echo("Task_dazuo trigger start ", 3)
+    Task_dazuo.trigger:enableTrigger()
+    Log.echo("Task_dazuo trigger start ", 4)
   end
 
   function Task_dazuo_StopEvent(event)
-    if (Task_dazuo.times <= 0) then
+    if (Task_dazuo.times <= 1) then
       Task_dazuo.stop()
-      Log.echo("Task_dazuo task times expire ", 2)
+      Log.echo("\n Task_dazuo task times expire \n", 4)
+      Log.echo("Task_dazuo trigger stop \n", 4)
     end
     Task_dazuo.times = Task_dazuo.times - 1
   end
 
   function Task_dazuo_StartEvent(event, times)
     pkuxkx_cmd.add_string_normal("dz")
-    Task_dazuo.start()
-    Task_dazuo.times = times
-    Log.echo("Task_dazuo task times set "..times, 2)
+    if (times > 1) then
+      Task_dazuo.start()
+      Task_dazuo.times = times
+    end
+    Log.echo("Task_dazuo task times set "..times, 4)
   end
 
+  
 
+  Task_dazuo.trigger:tempTrigger("你的内力增加了！！",function() pkuxkx_cmd.add_string_normal('dz') 
+    raiseEvent('Task_dazuo_StopEvent') 
+    end)
 
-Task_dazuo.tr1=tempTrigger("你的内力增加了！！",function()
+  Task_dazuo.trigger:tempTrigger("你感觉内力充盈，显然内功又有进境。",function()
   pkuxkx_cmd.add_string_normal("dz") raiseEvent("Task_dazuo_StopEvent")
   end)
 
-Task_dazuo.tr2=tempTrigger("你感觉内力充盈，显然内功又有进境。",function()
-  pkuxkx_cmd.add_string_normal("dz") raiseEvent("Task_dazuo_StopEvent")
-  end)
-
-Task_dazuo.tr3=tempTrigger("你将运转于全身经脉间的内息收回丹田，深深吸了口气，站了起来。",function()
+  Task_dazuo.trigger:tempTrigger("你将运转于全身经脉间的内息收回丹田，深深吸了口气，站了起来。",function()
   pkuxkx_cmd.add_string_normal("dz") raiseEvent("Task_dazuo_StopEvent")
   end)
 Task_dazuo.stop()
