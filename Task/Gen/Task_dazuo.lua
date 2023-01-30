@@ -1,5 +1,14 @@
 --[[
 Author: Tangzp tang5722917@163.com
+Date: 2023-01-30 08:34:12
+LastEditors: Tangzp tang5722917@163.com
+LastEditTime: 2023-01-30 09:28:51
+FilePath: \mudlet_-auto-robot\Task\Gen\Task_dazuo.lua
+Description:
+Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
+--]]
+--[[
+Author: Tangzp tang5722917@163.com
 Date: 2023-01-24 04:42:47
 LastEditors: Tangzp tang5722917@163.com
 LastEditTime: 2023-01-24 20:35:59
@@ -11,8 +20,8 @@ Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
 Task_dazuo = Task_dazuo or {}
 Task_dazuo.times = 0
 
-Task_dazuo.trigger = Trigger:new(nil, "dazuo_trigger")
-Task_dazuo.task = Task:new(nil,  "dazuo")
+Task_dazuo.trigger = Trigger("dazuo_trigger")
+Task_dazuo.task = Task("dazuo")
 
 registerAnonymousEventHandler("Task_dazuo_StartEvent", "Task_dazuo_StartEvent")
 registerAnonymousEventHandler("Task_dazuo_StopEvent", "Task_dazuo_StopEvent")

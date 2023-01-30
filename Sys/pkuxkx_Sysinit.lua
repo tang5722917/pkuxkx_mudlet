@@ -9,6 +9,8 @@ Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
 --]]
 
 --System 初始化导入
+dofile(Lua_path .. "Sys/SysFun/pkuxkx_SysObject.lua")
+dofile(Lua_path .. "Sys/SysFun/pkuxkx_Sys_status.lua")
 dofile(Lua_path.."Sys/SysFun/pkuxkx_SysFun_table.lua")
 dofile(Lua_path .. "Sys/SysFun/pkuxkx_Trigger_Base.lua")
 dofile(Lua_path .. "Sys/SysFun/pkuxkx_Complex_Trigger.lua")

@@ -1,11 +1,11 @@
 --[[
 Author: Tangzp tang5722917@163.com
-Date: 2023-01-18 06:19:48
+Date: 2023-01-30 08:34:12
 LastEditors: Tangzp tang5722917@163.com
-LastEditTime: 2023-01-25 02:38:48
+LastEditTime: 2023-01-31 05:35:40
 FilePath: \mudlet_-auto-robot\Sys\pkuxkx_SysKey.lua
 Description:
-Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
+Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
 --]]
 
 Sys_ResetKey = tempKey(mudlet.keymodifier.Control,mudlet.key.X, [[echo("Reset lua env") resetProfile()]])
@@ -16,4 +16,6 @@ Sys_Sys = tempKey(mudlet.keymodifier.Control,mudlet.key.S, [[echo("显示Trigger
 function SysKey_KillAll()
     killKey(Sys_ResetKey)
     killKey(Sys_ReloadKey)
+    killKey(Sys_Testy)
+    killKey(Sys_Sys)
 end
