@@ -1,11 +1,11 @@
 --[[
-Author: Donald Duck tang5722917@163.com
-Date: 2022-09-06 09:07:15
-LastEditors: Donald Duck tang5722917@163.com
-LastEditTime: 2022-10-04 02:44:10
-FilePath: /mudlet_-auto-robot/Init/pkuxkx_init.lua
-Description: Import all function module
-Copyright (c) 2022 by Donald Duck email: tang5722917@163.com, All Rights Reserved.
+Author: Tangzp tang5722917@163.com
+Date: 2023-01-31 06:01:59
+LastEditors: Tangzp tang5722917@163.com
+LastEditTime: 2023-01-31 07:30:02
+FilePath: \mudlet_-auto-robot\Init\pkuxkx_init.lua
+Description:
+Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
 --]]
 --
 --功能：脚本初始
@@ -33,8 +33,5 @@ dofile(Lua_path.."UI/pkuxkx_UI_init.lua")
 if (Pkuxkx_Debug_enable == 1) then
     dofile(Lua_path.."Debug/pkuxkx_Debuginit.lua")
 end
-
-dofile(Lua_path.."Sys/pkuxkx_SysReset.lua")
---加载复位功能
 
 Log.echo("脚本重新加载成功\n",1)

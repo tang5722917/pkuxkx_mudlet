@@ -5,6 +5,5 @@ dofile(Lua_path.."pkuxkx_load_init.lua")
 
 registerAnonymousEventHandler("ReLoadEvent", "ReLoadEvent")
 function ReLoadEvent(event)
-  SysReset()
-  dofile(Lua_path.."pkuxkx_load_init.lua")
+  resetProfile()
 end

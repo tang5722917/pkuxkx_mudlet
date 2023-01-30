@@ -8,14 +8,7 @@ Description:
 Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
 --]]
 
-Sys_ResetKey = tempKey(mudlet.keymodifier.Control,mudlet.key.X, [[echo("Reset lua env") resetProfile()]])
+Sys_ResetKey = tempKey(mudlet.keymodifier.Control,mudlet.key.X, [[echo("Reset lua env") ]])
 Sys_ReloadKey = tempKey(mudlet.keymodifier.Control, mudlet.key.Z, [[echo("重新加载Lua脚本\n") raiseEvent("ReLoadEvent")]])
 Sys_Test = tempKey(mudlet.keymodifier.Control, mudlet.key.A, [[echo("发出测试指令 \n") raiseEvent("pkuxkx_Test")]])
 Sys_Sys = tempKey(mudlet.keymodifier.Control,mudlet.key.S, [[echo("显示Trigger/Timer 数量： \n") pkuxkx_show_trigger_timer() ]])
-
-function SysKey_KillAll()
-    killKey(Sys_ResetKey)
-    killKey(Sys_ReloadKey)
-    killKey(Sys_Testy)
-    killKey(Sys_Sys)
-end

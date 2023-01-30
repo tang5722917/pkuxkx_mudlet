@@ -23,19 +23,19 @@ function Trigger_Base:new(instance)
   end
 
 function Trigger_Base.prototype:enableTrigger()
-    for i, v in pairs(self.tri_list) do
+    for i, v in ipairs(self.tri_list) do
         enableTrigger(v)
     end
 end
 
 function Trigger_Base.prototype:disableTrigger()
-    for i, v in pairs(self.tri_list) do
+    for i, v in ipairs(self.tri_list) do
         disableTrigger(v)
     end
 end
 
 function Trigger_Base.prototype:killTrigger()
-    for i, v in pairs(self.tri_list) do
+    for i, v in ipairs(self.tri_list) do
         killTrigger(v)
         self.tri_num = self.tri_num -1
     end

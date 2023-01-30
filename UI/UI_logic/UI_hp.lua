@@ -1,14 +1,15 @@
 --[[
 Author: Tangzp tang5722917@163.com
-Date: 2023-01-24 04:42:47
+Date: 2023-01-31 06:01:59
 LastEditors: Tangzp tang5722917@163.com
-LastEditTime: 2023-01-29 08:51:17
+LastEditTime: 2023-01-31 06:45:05
 FilePath: \mudlet_-auto-robot\UI\UI_logic\UI_hp.lua
 Description:
-Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
+Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
 --]]
 
-HP_UI = HP_UI or {}
+
+HP_UI = {}
 
 registerAnonymousEventHandler("HP_update", "HP_update")
 
