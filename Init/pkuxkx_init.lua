@@ -12,7 +12,10 @@ Copyright (c) 2022 by Donald Duck email: tang5722917@163.com, All Rights Reserve
 --
 --SysTrigger
 --初始化系统配置文件
-dofile(Lua_path.."Init/pkuxkx_init_config.lua")
+dofile(Lua_path .. "Init/pkuxkx_init_config.lua")
+-- 加载玩家定义
+dofile(Lua_path .. "User/pkuxkx_user_init.lua")
+
 --加载日志功能
 dofile(Lua_path.."Sys/pkuxkx_SysLog.lua")
 --加载核心功能
@@ -30,5 +33,8 @@ dofile(Lua_path.."UI/pkuxkx_UI_init.lua")
 if (Pkuxkx_Debug_enable == 1) then
     dofile(Lua_path.."Debug/pkuxkx_Debuginit.lua")
 end
+
+dofile(Lua_path.."Sys/pkuxkx_SysReset.lua")
+--加载复位功能
 
 Log.echo("脚本重新加载成功\n",1)

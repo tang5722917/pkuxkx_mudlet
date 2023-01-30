@@ -1,0 +1,6 @@
+System:
+
+Ctrl + S : 查看Mudlet 系统状态
+Ctrl + Z : 重新加载Lua脚本
+Ctrl + X ：重启Lua脚本环境
+Ctrl + A : 发出测试/Debug指令

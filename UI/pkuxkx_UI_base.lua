@@ -165,7 +165,7 @@ GUI.Footer = Geyser.HBox:new({
   GUI.GaugeFrontCSS:set("background-color","red")
   GUI.Jingshen.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
   GUI.Jingshen:setValue(100,100)
-  GUI.Jingshen.front:echo("精神")
+  GUI.Jingshen.front:echo("精神 -- / -- ")
 
   GUI.Xueqi = Geyser.Gauge:new({
     name = "Xueqi",
@@ -173,8 +173,8 @@ GUI.Footer = Geyser.HBox:new({
   GUI.Xueqi.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
   GUI.GaugeFrontCSS:set("background-color","red")
   GUI.Xueqi.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
-  GUI.Xueqi:setValue(50,100)
-  GUI.Xueqi.front:echo("血气")
+  GUI.Xueqi:setValue(100,100)
+  GUI.Xueqi.front:echo("血气  -- / -- / -- ")
 
   GUI.Jingli = Geyser.Gauge:new({
     name = "GUI.Jingli",
@@ -182,8 +182,8 @@ GUI.Footer = Geyser.HBox:new({
   GUI.Jingli.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
   GUI.GaugeFrontCSS:set("background-color","orange")
   GUI.Jingli.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
-  GUI.Jingli:setValue(80,100)
-  GUI.Jingli.front:echo("精力")
+  GUI.Jingli:setValue(100,100)
+  GUI.Jingli.front:echo("精力 -- / -- / -- ")
   --GUI.Jingli.front:echo([[<span style = "color: black">GUI.Endurance</span>]])
 
   GUI.Neili = Geyser.Gauge:new({
@@ -192,8 +192,8 @@ GUI.Footer = Geyser.HBox:new({
   GUI.Neili.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
   GUI.GaugeFrontCSS:set("background-color","orange")
   GUI.Neili.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
-  GUI.Neili:setValue(70,100)
-GUI.Neili.front:echo("内力")
+  GUI.Neili:setValue(100,100)
+GUI.Neili.front:echo("内力 -- / -- ")
 
 GUI.Shiwu = Geyser.Gauge:new({
   name = "GUI.Shiwu",
@@ -201,8 +201,8 @@ GUI.Shiwu = Geyser.Gauge:new({
 GUI.Shiwu.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
 GUI.GaugeFrontCSS:set("background-color","blue")
 GUI.Shiwu.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
-GUI.Shiwu:setValue(50,100)
-GUI.Shiwu.front:echo("食物")
+GUI.Shiwu:setValue(100,100)
+GUI.Shiwu.front:echo("食物 -- ")
 
 GUI.Yinshui = Geyser.Gauge:new({
   name = "GUI.Yinshui",
@@ -210,8 +210,8 @@ GUI.Yinshui = Geyser.Gauge:new({
 GUI.Yinshui.back:setStyleSheet(GUI.GaugeBackCSS:getCSS())
 GUI.GaugeFrontCSS:set("background-color","blue")
 GUI.Yinshui.front:setStyleSheet(GUI.GaugeFrontCSS:getCSS())
-GUI.Yinshui:setValue(80,100)
-GUI.Yinshui.front:echo("饮水")
+GUI.Yinshui:setValue(100,100)
+GUI.Yinshui.front:echo("饮水 -- ")
 --GUI.Yinshui.front:echo([[<span style = "color: black">饮水]])
 
 GUI.BoxCSS = CSSMan.new([[
