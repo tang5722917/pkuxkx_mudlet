@@ -2,7 +2,7 @@
 Author: Tangzp tang5722917@163.com
 Date: 2023-01-24 04:42:47
 LastEditors: Tangzp tang5722917@163.com
-LastEditTime: 2023-01-27 10:56:03
+LastEditTime: 2023-01-29 08:51:17
 FilePath: \mudlet_-auto-robot\UI\UI_logic\UI_hp.lua
 Description:
 Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
@@ -31,10 +31,10 @@ end
 
 HP_UI.task = Task:new(nil, "HP_UI")
 
-HP_UI.trigger = ComplexTrigger:new(nil, "HP UI task")
+--HP_UI.trigger = ComplexTrigger:new(nil, "HP UI task")
 HP_UI.timmer = Timer:new(nil, "HP UI timer")
 
-HP_UI.trigger:tempMultiRegexTrigger("HP_capture_tri","^#([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)$",[[ HP_UI.data_capture() ]],3,3)
+--HP_UI.trigger:tempMultiRegexTrigger("HP_capture_tri","^#([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)$",[[ HP_UI.data_capture() ]],3,3)
 
 
 
@@ -44,5 +44,5 @@ HP_UI.timmer:tempTimer(Pkuxkx_HP_UI_Auto_time,
 
 HP_UI.task:add_tri_obj(HP_UI.trigger)
 HP_UI.task:add_timer_obj(HP_UI.timmer)
-HP_UI.task:start()
+--HP_UI.task:start()
 UI_task_list:add_task_obj(HP_UI.task)
