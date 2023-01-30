@@ -11,8 +11,7 @@ Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
 Task_dazuo = Task_dazuo or {}
 Task_dazuo.times = 0
 
-Task_dazuo.trigger = Trigger:new(nil, "dazuo")
-
+Task_dazuo.trigger = Trigger:new(nil, "dazuo_trigger")
 Task_dazuo.task = Task:new(nil,  "dazuo")
 
 registerAnonymousEventHandler("Task_dazuo_StartEvent", "Task_dazuo_StartEvent")

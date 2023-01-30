@@ -14,4 +14,5 @@ dofile(Lua_path .. "UI/UI_logic/UI_hp.lua")
 
 function UI_reset()
     UI_task_list:task_kill()
+    Log.echo("UI Task Kill成功",3)
 end

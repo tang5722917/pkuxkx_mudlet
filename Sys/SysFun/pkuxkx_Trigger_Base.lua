@@ -2,11 +2,12 @@
 Author: Tangzp tang5722917@163.com
 Date: 2023-01-24 04:42:47
 LastEditors: Tangzp tang5722917@163.com
-LastEditTime: 2023-01-27 11:11:00
+LastEditTime: 2023-01-29 08:57:23
 FilePath: \mudlet_-auto-robot\Sys\SysFun\pkuxkx_Trigger_Base.lua
 Description:
 Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
 --]]
+
 
 
 
@@ -40,6 +41,7 @@ end
 
 function Trigger_Base:killTrigger()
     for i, v in pairs(self.tri_list) do
+        --echo(v.." HH")
         killTrigger(v)
         self.tri_num = self.tri_num -1
     end
@@ -59,24 +61,13 @@ function Trigger:new (o,name)
 
 
 function Trigger:tempRegexTrigger(regex,code)
-    expireAfter = expireAfter or 1
     local tRt = tempRegexTrigger(regex, code)
     self.tri_num = self.tri_num + 1
     table.insert(self.tri_list,tRt)
 end
 
 function Trigger:tempTrigger(substring,code)
-    expireAfter = expireAfter or 1
     local tRt = tempTrigger(substring, code)
     self.tri_num = self.tri_num + 1
     table.insert(self.tri_list,tRt)
-end
-
-
-
-function Trigger:tempMultiRegexTrigger(name, regex, code, multiline,expireAfter)
-    expireAfter = expireAfter or 1
-    local tRt = tempComplexRegexTrigger(name, regex, code, multiline, 0, 0, 0, 0, 0, 0, 0, 0, 0,expireAfter)
-    self.tri_num = self.tri_num + 1
-    table.insert(self.tri_list,name)
 end
