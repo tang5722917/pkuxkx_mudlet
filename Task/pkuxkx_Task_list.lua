@@ -7,8 +7,3 @@ FilePath: \mudlet_-auto-robot\Task\pkuxkx_Task_list.lua
 Description:
 Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
 --]]
-
-function Task_reset()
-    Gen_task_list:task_kill()
-    Log.echo("Task list Kill成功",3)
-end

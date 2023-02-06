@@ -1,11 +1,13 @@
 --[[
 Author: Tangzp tang5722917@163.com
-Date: 2023-01-24 22:07:06
+Date: 2023-01-31 06:01:59
 LastEditors: Tangzp tang5722917@163.com
-LastEditTime: 2023-01-24 22:10:38
+LastEditTime: 2023-02-05 09:10:36
 FilePath: \mudlet_-auto-robot\User\pkuxkx_user_create.lua
 Description:
-Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
+Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
 --]]
 
-cur_user = User:new(nil, "default user")
+Pkuxkx_user = Pkuxkx_user or {}
+
+Pkuxkx_user.cur_user = User("default user")
