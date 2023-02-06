@@ -1,12 +1,13 @@
 --[[
 Author: Tangzp tang5722917@163.com
-Date: 2023-01-18 06:22:56
+Date: 2023-01-31 06:01:59
 LastEditors: Tangzp tang5722917@163.com
-LastEditTime: 2023-01-27 05:25:30
+LastEditTime: 2023-02-07 00:03:51
 FilePath: \mudlet_-auto-robot\Sys\pkuxkx_Sysinit.lua
 Description:
-Copyright (c) 2023 by Tangzp email: tang5722917@163.com, All Rights Reserved.
+Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
 --]]
+
 
 --System 初始化导入
 dofile(Lua_path .. "Sys/SysFun/pkuxkx_SysObject.lua")
@@ -17,7 +18,6 @@ dofile(Lua_path .. "Sys/SysFun/pkuxkx_Complex_Trigger.lua")
 dofile(Lua_path .. "Sys/SysFun/pkuxkx_Timer_Base.lua")
 dofile(Lua_path .. "Sys/SysFun/pkuxkx_Task_Base.lua")
 dofile(Lua_path .. "Sys/SysFun/pkuxkx_Task_Control.lua")
-dofile(Lua_path .. "Sys/SysFun/pkuxkx_Sys_status.lua")
 
 
 dofile(Lua_path.."Sys/pkuxkx_SysTrigger_Timer_Control.lua")
