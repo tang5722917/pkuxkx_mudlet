@@ -13,13 +13,12 @@ Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
 --SysTrigger
 --初始化系统配置文件
 dofile(Lua_path .. "Init/pkuxkx_init_config.lua")
--- 加载玩家定义
-dofile(Lua_path .. "User/pkuxkx_user_init.lua")
-
 --加载日志功能
 dofile(Lua_path.."Sys/pkuxkx_SysLog.lua")
 --加载核心功能
-dofile(Lua_path.."Sys/pkuxkx_Sysinit.lua")
+dofile(Lua_path .. "Sys/pkuxkx_Sysinit.lua")
+-- 加载玩家定义
+dofile(Lua_path .. "User/pkuxkx_user_init.lua")
 --加载系统快捷键
 
 --加载任务系统

@@ -17,6 +17,7 @@ Task.prototype.tri_obj_list = {}
 Task.prototype.tri_obj_num = 0
 Task.prototype.timer_obj_list = {}
 Task.prototype.timer_obj_num = 0
+Task.prototype.data = {}
 
 --- 类的方法
 
@@ -26,8 +27,8 @@ function Task:new(instance)
     instance.tri_obj_num = 0
     instance.timer_obj_list = {}
     instance.timer_obj_num = 0
+    instance.data = {}
   end
-
 
 function Task.prototype:add_tri_obj(tri_obj)
     self.tri_obj_num = self.tri_obj_num + 1
