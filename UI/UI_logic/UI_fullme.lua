@@ -1,12 +1,13 @@
 --[[
 Author: Tangzp tang5722917@163.com
-Date: 2023-02-06 23:07:42
+Date: 2023-02-07 05:02:11
 LastEditors: Tangzp tang5722917@163.com
-LastEditTime: 2023-02-06 23:12:55
+LastEditTime: 2023-02-08 08:22:46
 FilePath: \mudlet_-auto-robot\UI\UI_logic\UI_fullme.lua
 Description:
 Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
 --]]
+
 Pkuxkx_Fullme_UI = Pkuxkx_Fullme_UI or {}
 
   --  开始下载url 对应的链接
@@ -56,7 +57,26 @@ Pkuxkx_Fullme_UI = Pkuxkx_Fullme_UI or {}
       Pkuxkx_Fullme_UI.picturelabelclose:setReleaseCallback("Pkuxkx_Fullme_UI.hidecaptcha")
 end
 
+function Pkuxkx_Fullme_UI.data_capture()
+    showMultimatches()
+end
+
+
 Pkuxkx_Fullme_UI.task = Task("Fullme_UI")
 Pkuxkx_Fullme_UI.trigger = ComplexTrigger("Fullme UI task")
-Pkuxkx_Fullme_UI.trigger = Pkuxkx_HP_UI.trigger:tempMultiRegexTrigger("Pkuxkx_Fullme_UI_capture",
-    "^#([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)$", [[ Pkuxkx_HP_UI.data_capture() ]], 0, 0, 0)
+
+Pkuxkx_Fullme_UI.trigger:tempMultiRegexTrigger("Pkuxkx_Fullme_UI_capture",
+    "你现在才来呀，不过总比不来好。", [[ ]], 1, 1, 0)
+Pkuxkx_Fullme_UI.trigger:tempMultiRegexTrigger("Pkuxkx_Fullme_UI_capture",
+    ".+", [[ Pkuxkx_Fullme_UI.data_capture() ]], 1, 1, 0)
+
+Pkuxkx_Fullme_UI.task:add_tri_obj(Pkuxkx_Fullme_UI.trigger)
+Pkuxkx_Fullme_UI.task:start()
+UI_task_list:add_task_obj(Pkuxkx_Fullme_UI.task)
+
+
+--[[
+lua dfeedTriggers("你现在才来呀，不过总比不来好。\n http://fullme.pkuxkx.net/robot.php?filename=1675728405289573")
+    你现在才来呀，不过总比不来好。
+    http://fullme.pkuxkx.net/robot.php?filename=1675728405289573
+]]--

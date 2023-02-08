@@ -92,7 +92,6 @@ function Pkuxkx_HP_UI.data_capture()
     Pkuxkx_HP_UI.task.data[1] = Pkuxkx_HP_UI.task.data[1] + 1
     if Pkuxkx_HP_UI.task.data[1] == 1 then
         table.insert(Pkuxkx_HP_UI.task.data[2], matches)
-        Log.echo(tostring(matches[2]), 5)
     end
     if Pkuxkx_HP_UI.task.data[1] == 2 then
         table.insert(Pkuxkx_HP_UI.task.data[2], matches)
@@ -102,6 +101,7 @@ function Pkuxkx_HP_UI.data_capture()
         Log.echo("\nCapture HP data successfully!", 5)
         Pkuxkx_HP_UI.UI_update(Pkuxkx_HP_UI.task.data[2])
         Pkuxkx_HP_UI.task.data[1] = 0
+        Pkuxkx_HP_UI.task.data[2] = {}
     end
 end
 
@@ -114,7 +114,7 @@ table.insert(Pkuxkx_HP_UI.task.data,{HP_1=nil,HP_2=nil,HP_3=nil}) --HP_UI.task.d
 Pkuxkx_HP_UI.trigger = ComplexTrigger("HP UI task")
 Pkuxkx_HP_UI.timmer = Timer("HP UI timer")
 
-Pkuxkx_HP_UI.trigger:tempMultiRegexTrigger("Pkuxkx_HP_UI_capture","^#([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)$",[[ Pkuxkx_HP_UI.data_capture() ]],0,0,0)
+Pkuxkx_HP_UI.trigger:tempMultiRegexTrigger("Pkuxkx_HP_UI_capture","^#([0-9/-]+),([0-9/-]+),([0-9/-]+),([0-9/-]+),([0-9/-]+),([0-9/-]+)$",[[ Pkuxkx_HP_UI.data_capture() ]],0,0,0)
 
 Pkuxkx_HP_UI.timmer:tempTimer(Pkuxkx_HP_UI_Auto_time,
                        function() raiseEvent("HP_update") end,
