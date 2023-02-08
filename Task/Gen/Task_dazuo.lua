@@ -1,21 +1,13 @@
 --[[
 Author: Tangzp tang5722917@163.com
-Date: 2023-01-31 06:01:59
+Date: 2023-02-07 05:02:11
 LastEditors: Tangzp tang5722917@163.com
-LastEditTime: 2023-01-31 06:46:46
+LastEditTime: 2023-02-09 04:06:04
 FilePath: \mudlet_-auto-robot\Task\Gen\Task_dazuo.lua
 Description:
 Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
 --]]
---[[
-Author: Tangzp tang5722917@163.com
-Date: 2023-01-30 08:34:12
-LastEditors: Tangzp tang5722917@163.com
-LastEditTime: 2023-01-30 09:28:51
-FilePath: \mudlet_-auto-robot\Task\Gen\Task_dazuo.lua
-Description:
-Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
---]]
+
 
 Task_dazuo = {}
 Task_dazuo.times = 0
@@ -36,13 +28,13 @@ registerAnonymousEventHandler("Task_dazuo_StopEvent", "Task_dazuo_StopEvent")
     Task_dazuo.times = Task_dazuo.times - 1
   end
 
-  function Task_dazuo_StartEvent(event, times)
+function Task_dazuo_StartEvent(event, times)
+    Log.echo("Task_dazuo task times set "..times, 4)
     pkuxkx_cmd.add_string_normal("dz")
     if (times > 1) then
       Task_dazuo.task:start()
-      Task_dazuo.times = times
+      Task_dazuo.times = times - 1
     end
-    Log.echo("Task_dazuo task times set "..times, 4)
   end
 
 
