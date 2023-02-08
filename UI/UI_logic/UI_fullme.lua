@@ -15,7 +15,7 @@ Pkuxkx_Fullme_UI = Pkuxkx_Fullme_UI or {}
     Pkuxkx_Fullme_UI.captcha = url
     --downloadFile(saveto, url)
     downloadFile(getMudletHomeDir() .. "/pkuxkx_captcha.html", url)
-  end
+  endfull
 
   function Pkuxkx_Fullme_UI.parsewebpage(filename)
     local f, s, webpage = io.open(filename)
@@ -58,7 +58,8 @@ Pkuxkx_Fullme_UI = Pkuxkx_Fullme_UI or {}
 end
 
 function Pkuxkx_Fullme_UI.data_capture()
-    showMultimatches()
+    Pkuxkx_Fullme_UI.downloadcaptcha(multimatches[2][1])
+    Log.echo("\n Fullme 图片下载完毕", 4)
 end
 
 
@@ -66,9 +67,12 @@ Pkuxkx_Fullme_UI.task = Task("Fullme_UI")
 Pkuxkx_Fullme_UI.trigger = ComplexTrigger("Fullme UI task")
 
 Pkuxkx_Fullme_UI.trigger:tempMultiRegexTrigger("Pkuxkx_Fullme_UI_capture",
-    "你现在才来呀，不过总比不来好。", [[ ]], 1, 1, 0)
+    "你现在才来呀，不过总比不来好。", [[ ]], 1, 0, 1)
 Pkuxkx_Fullme_UI.trigger:tempMultiRegexTrigger("Pkuxkx_Fullme_UI_capture",
-    ".+", [[ Pkuxkx_Fullme_UI.data_capture() ]], 1, 1, 0)
+    "http://fullme.+", [[ Pkuxkx_Fullme_UI.data_capture() ]], 1, 0, 1)
+
+Pkuxkx_Fullme_UI.trigger:tempMultiRegexTrigger("Pkuxkx_Fullme_UI_Delete_1",
+    "你的客户端不支持MXP,请直接打开链接查看图片。", [[ deleteLine() ]], 0, 0, 0)
 
 Pkuxkx_Fullme_UI.task:add_tri_obj(Pkuxkx_Fullme_UI.trigger)
 Pkuxkx_Fullme_UI.task:start()
@@ -76,7 +80,7 @@ UI_task_list:add_task_obj(Pkuxkx_Fullme_UI.task)
 
 
 --[[
-lua dfeedTriggers("你现在才来呀，不过总比不来好。\n http://fullme.pkuxkx.net/robot.php?filename=1675728405289573")
+lua dfeedTriggers("你现在才来呀，不过总比不来好。\n http://fullme.pkuxkx.net/robot.php?filename=1675890048965918")
     你现在才来呀，不过总比不来好。
     http://fullme.pkuxkx.net/robot.php?filename=1675728405289573
 ]]--

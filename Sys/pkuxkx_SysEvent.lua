@@ -1,3 +1,12 @@
+--[[
+Author: Tangzp tang5722917@163.com
+Date: 2023-02-07 05:02:11
+LastEditors: Tangzp tang5722917@163.com
+LastEditTime: 2023-02-09 04:38:34
+FilePath: \mudlet_-auto-robot\Sys\pkuxkx_SysEvent.lua
+Description:
+Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
+--]]
 Pkuxkx_SysEvent = Pkuxkx_SysEvent or {}
 
 --Raised when Mudlet is finished downloading a file successfully - the location of the downloaded file is passed as a second argument.
